@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cereal Leaf Disease Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.42.0/gradio.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cereal Leaf Disease Detection</h1>
+        <p>Identify and diagnose Tan Spot and Septoria Tritici Blotch, with an advanced machine learning model.</p>
+    </header>
+    
+    <main>
+        <section class="embed-section">
+            <h2>Detect Disease</h2>
+            <p>Upload an image of a cereal leaf to classify it as either Tan Spot or Septoria Tritici Blotch.</p>
+            <iframe
+                src="https://your-username-cereal-disease.hf.space"
+                frameborder="0"
+                width="850"
+                height="450">
+            </iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Powered by <a href="https://huggingface.co/spaces/your-username/cereal_disease" target="_blank">Hugging Face Spaces</a></p>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>
