@@ -28,8 +28,7 @@ iface = gr.Interface(
     fn=predict_image,
     inputs=gr.Image(type="filepath", label="Upload Image"),
     outputs=gr.Text(label="Prediction"),
-    title="Cereal Disease Classifier",
-    description="Upload an image of a cereal leaf to classify it as Mycosphaerella or Dreschleria."
+    
 )
 
 iface.launch()
